@@ -7,26 +7,53 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Reproductor de video</title>
   </head>
+  <link rel="stylesheet" href="./styles/main.css" />
   <body>
-    <main>
-      <label>
-        Suba su archivo
-        <input type="file" name="archivoSubido" />
-      </label>
-      <input type="submit" name="enviar datos" />
-      <figure>
-        <video controls class="video" src="./video/video%20(1).mp4">
-          <track />
-        </video>
+    <main class="main">
+      <header>
+        <h1 class="title">Reproductor de video</h1>
+      </header>
+      <div class="wrapperBox">
+        <section class="wrapper">
+          <h2 class="subtitle">Carga de fichero</h2>
+          <label>
+            Seleccione un video
+            <input
+              type="file"
+              name="file"
+              id="btnSend"
+              accept="video/mp4,video/x-m4v,video/*"
+            />
+          </label>
+        </section>
         <div>
-          <button class="play">Reproducir</button>
-          <button class="pause">Pausar</button>
-          <button class="voment+">Subir volumen</button>
-          <button class="volumen-">Bajar volumen</button>
+          <figure class="hiddenVideo">
+            <video controls id="video">
+              <track
+                label="Español"
+                kind="subtitles"
+                srclang="subtitles"
+                default
+              />
+            </video>
+            <div class="boxButtons">
+              <button class="play" onclick="onClickPlayOrPause()">
+                Reproducir/Pausar
+              </button>
+              <button class="pause" onclick="onClickStop()">Parar</button>
+              <button onclick="onClickChangeVolumeUp()" class="volumeUp">
+                Subir volumen
+              </button>
+              <button onclick="onClickChangeVolumeDown()" class="volumeDown">
+                Bajar volumen
+              </button>
+            </div>
+          </figure>
         </div>
-      </figure>
+      </div>
     </main>
+    <script src="./js/main.js"></script>
   </body>
 </html>

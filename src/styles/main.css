@@ -1,0 +1,71 @@
+* {
+  background-color: bisque;
+}
+
+.title {
+  text-align: center;
+}
+
+video {
+  width: 60rem;
+}
+
+.wrapperBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  height: 40rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.subtitle {
+  margin-bottom: 15rem;
+}
+
+.boxButtons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+}
+
+.play {
+  color: aliceblue;
+  border: none;
+  background-color: green;
+  height: 2rem;
+  margin-right: 2rem;
+}
+
+.pause {
+  color: aliceblue;
+  border: none;
+  background-color: gray;
+  height: 2rem;
+  margin-right: 2rem;
+}
+
+.volumeUp {
+  color: aliceblue;
+  border: none;
+  background-color: rgb(240, 96, 29);
+
+  height: 2rem;
+  margin-right: 2rem;
+}
+
+.volumeDown {
+  color: aliceblue;
+  border: none;
+  background-color: rgb(236, 160, 61);
+  height: 2rem;
+  margin-right: 2rem;
+}
+
+.hiddenVideo {
+  display: none;
+}
